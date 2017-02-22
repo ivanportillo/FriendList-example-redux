@@ -1,0 +1,7 @@
+const array = [1, 2, 3];
+
+map(array, (data, callback) => {
+  callback(null, data + 1);
+}, (err, result) => {
+  console.log(result)
+});
