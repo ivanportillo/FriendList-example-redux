@@ -25,7 +25,7 @@ const initState = {
 export default function data(state = initState, action) {
   switch(action.type) {
     case ADD_FRIEND:
-      const newId = state.friends[state.friends.length-1].id + 1;
+      const newId = state.friends.length ? state.friends[state.friends.length-1].id + 1 : 0;
       return {
         ...state,
         friends: state.friends.concat({ id: newId, name: action.friend }),
