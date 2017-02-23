@@ -1,5 +1,5 @@
 import React, { Component } from 'react';
-import FriendListContainer from '../FriendListContainer/FriendListContainer';
+import FriendListContainer from '../../containers/FriendListContainer';
 import './App.css';
 
 class App extends Component {

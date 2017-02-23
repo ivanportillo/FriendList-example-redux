@@ -1,12 +1,12 @@
 import React, { Component } from 'react';
 import { Message, Header, List } from 'semantic-ui-react';
-import FriendListItem from '../../containers/FriendListItem';
+import FriendListItem from '../FriendListItem/FriendListItem';
 
 class FriendList extends Component{
   render(){
-    const { friends } = this.props;
+    const { friends, starFriend, removeFriend } = this.props;
     const friendsComponents = friends.map((friend) => {
-      return <FriendListItem friend={friend} key={friend.id} />;
+      return <FriendListItem friend={friend} starFriend={starFriend} removeFriend={removeFriend} key={friend.id} />;
     });
     if(!friends.length){
       return (
